@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+}
+
+body {
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+}
+
+.container {
+    max-width: 88rem;
+}
+
+.centralize {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);;
+}
+
+.logo-image {
+    width: 80px;
+    margin-left: 20px;
+}
+
+.header-title {
+    margin-left: 20px;
+}
