@@ -15,7 +15,7 @@ body {
 header {
     display: flex;
     align-items: center;
-    background-color: aqua;
+    background-color: rgb(40, 60, 150);
 }
 
 .container {

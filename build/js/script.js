@@ -1,24 +1,23 @@
 const form = {
     newDate: () => document.querySelector('.today-date'),
-
+    date : () => new Date(),
+    day: () => form.date().getDate(),
+    month: () => form.date().getMonth() + 1,
+    year: () => form.date().getFullYear(),
+    currentDate: () => `${form.day()}/${form.month()}/${form.year()}`
 }
+
+// console.log(form.currentDate()); // today!
 
 document.addEventListener("DOMContentLoaded", () => {
-    todayDate()
-    teste()
+    getCurrentDate()
 })
 
-function todayDate() {
-    newDate = new Date()
-    const day = String(newDate.getDate())
-    const month = String(newDate.getMonth())
-    const year = newDate.getFullYear() 
-    
-    const data = `${day}/${month}/${year}`
-    console.log(todayDate());
-}
-
-
-function teste() {
-    console.log("teste");
+function getCurrentDate() {
+    document.querySelector(".date-today").innerHTML += 
+        `
+        <div class="current-date">
+            ${form.currentDate()}
+        </div>
+        `
 }
