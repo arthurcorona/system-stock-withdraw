@@ -19,24 +19,79 @@
     </header>
     
     <main class="container centralize">
-        <div class="inputs">
+        <h2>Adicionar Retira</h2>
+        <div class="grid">
             <div>
-                <div><label>Data de Hoje:</label></div> 
+                <div><label>Data:</label></div> 
                 <div class="date-today">
                     
                 </div>
             </div>
             <div class="order-create">
                 <div><label>Cliente:</label></div>
-                <input  placeholder="Cliente" />
+                <input onchange="onChangeThreadSubmit()" class="client-input"  placeholder="Cliente" />
             </div>
             <div class="order-volume">
                 <div><label>Volume(s):</label></div>
-                <input  placeholder="Volume" />
+                <input onchange="onChangeThreadSubmit()" class="vol-input" type="number"  placeholder="Volume" />
             </div>
+            <!-- <div class="order-type">
+                <div><label>Tipo do Volume(s):</label></div>
+                <input oninput="toggleSubmitButtonDisable()" class="vol-input" type="number"  placeholder="Caixa / Sacola" />
+            </div> -->
         </div>
+        <button onclick="createOrderInDB()" disabled id="submit-button" class="centralize" type="submit">Enviar</button>
+    <br><br>
+
+    <div class="container centralize ">
+
+        <h2>Retiras Atuais</h2>
+
+        <hr><hr><hr>
+
+        <div class="client grid">
+            <div class="order-date">Data:
+                <br>
+                12/12/1202
+            </div>
+            <div class="name-client">Cliente:
+                <br>
+                GBJ
+            </div>
+            <div class="volumes-client">Volumes: 
+                <br>
+                2
+            </div>
+            
+            <hr><hr><hr>
+        </div>
+
+        <div class="client grid">
+            <div class="order-date">Data:
+                <br>
+                12/12/1202
+            </div>
+            <div class="name-client">Cliente:
+                <br>
+                GBJ
+            </div>
+            <div class="volumes-client">Volumes: 
+                <br>
+                2
+            </div>
+            
+            <hr><hr><hr>
+        </div>
+
+        
+
     </main>
 </body>
-<script src="./build/js/firebase.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+<script src="/public/script/firebase.js"></script>
 <script src="./build/js/script.js"></script>
-</html>
+</html> 

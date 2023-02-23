@@ -29,6 +29,14 @@ header {
 }
 
 .inputs {
+
+}
+
+.client {
+    background-color: rgb(203, 203, 203);
+    padding: 10px;
+}
+.grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);;
 }
